@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=792, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="bower_components/shower-bright/styles/screen.css">
+    <link rel="stylesheet" href="bower_components/highlightjs/styles/vs.css">
+    
+</head>
+<body class="list">
+<header class="caption">
+    <h1>TypeScript</h1>
+    
+    <p>By <a href="kcherkashin.org">Kirill Cherkashin</a></p>
+    
+
+</header>
+<section class="slide cover" id="Cover">
+    <div>
+        <h2>TypeScript</h2>
+
+        <p>by <a href="kcherkashin.org">Kirill Cherkashin</a></p>
+        <!--
+            To apply styles to the certain slides
+            set slide ID to get needed elements
+            -->
+        <style>
+            #Cover h2 {
+                margin: 30px 0 0;
+                color: #FFF;
+                text-align: center;
+                font-size: 70px;
+            }
+
+            #Cover p {
+                margin: 10px 0 0;
+                text-align: center;
+                color: #FFF;
+                font-style: italic;
+                font-size: 20px;
+            }
+
+            #Cover p a {
+                color: #FFF;
+            }
+        </style>
+    </div>
+</section>
+   
+<section class="slide shout">
+    <div>
+        <h2>Why TypeScript?</h2>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Features</h2>
+        <ul>
+            <li>Superset of Javascript: Any JS is a valid TS</li>
+            <li>Support for some ES6 features</li>
+            <li>Works seamlessly with JS libraries</li>
+            <li>Static type checking</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Tools Support</h2>
+        <ul>
+            <li>Plugins for IDEs: Intellij, Eclipse, Sublime, Visual Studio</li>
+            <li>Plugins for Build Tools: Grunt, Gulp, Broccoli</li>
+            <li>TypeScript compiler is an npm module </li>
+            <li>Typescript.api for parsing and getting AST</li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="slide">
+    <div>
+        <h2>Creators</h2>
+        <ul>
+            <li>Created by Anders Hejlsberg (C#, Turbo Pascal)</li>
+            <li>Supported by Microsoft</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Compiling to JavaScript</h2>
+        <ul>
+            <li>Can be compiled on save</li>
+            <li>Incremental compilation</li>
+            <li>Can be compiled to ES3 or ES5</li>
+            <li>Really clean output</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide shout">
+    <div>
+        <h2>Static Typing</h2>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Simple types</h2>
+        <pre><code>var s: string = "Hello";
+var c: number = 121;
+var r: boolean = true;
+var t: Number[]  = [1,2,3];
+var i: any; 
+var p: void = undefined;
+
+            </code>
+        </pre>
+    </div>
+</section>
+
+ 
+
+<section class="slide">
+    <div>
+        <h2>Complex types</h2>
+        <pre>
+<code>var point:{ 
+    x: number,
+    y: number
+};
+point = { x: 0, y: 1}
+
+</code>
+        </pre>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Interfaces</h2>
+        <pre>
+<code>interface IPoint {
+  x:number;
+  y:number;
+  z:number;
+}
+ 
+var point:IPoint;
+</code>
+        </pre>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Function types</h2>
+        <pre>
+<code>var stringLength:(string:String) => number;
+</code>
+        </pre>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Generics</h2>
+        <pre>
+<code>function identity&lt;T&gt;( x:T ){ 
+    return x
+};
+
+var x:number = identity("3");
+</code>
+        </pre>
+    </div>
+</section>
+
+
+<section class="slide">
+    <div>
+        <h2>Type definitions for type information for other libraries</h2>
+        <ul>
+            <li>Can be downloaded from <a href = "https://github.com/borisyankov/DefinitelyTyped">
+                github.com/borisyankov/DefinitelyTyped
+            </a></li>
+            <li>Or can be installed via TypeDefinition Package manager <a href = "http://www.tsdpm.com">tsdpm.com</a> </li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="slide shout">
+    <div>
+        <h2>ES6 features</h2>
+         <pre>
+            <code></code>
+        </pre>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Classes</h2>
+        <pre>
+            <code>class Animal {
+  run = function(): void {}
+}
+class Dog extends Animal {
+  bark = function(): void {  }
+}
+</code>
+        </pre>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Optional Parameters</h2>
+        <pre>
+            <code>function getRange(max, min = 0, exclusive = false) {
+  // ...
+}</code>
+        </pre>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>...rest parameter</h2>
+        <pre><code>function publish(topic, ...args):void {
+
+}</code>
+        </pre>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Arrow function</h2>
+        <p>
+            Preserves the context
+        </p>
+        <pre><code>[1,2,3].map( ( x ) => x + 1 )
+</code></pre>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Enumerables</h2>
+        <pre><code>enum colors {
+  RED,
+  GREEN,
+  BLUE
+}</code>
+        </pre>
+    </div>
+</section>
+
+
+<section class="slide shout">
+    <div>
+        <h2>Modules</h2>
+    </div>
+</section>
+
+
+<section class="slide">
+    <div>
+        <h2>Modules</h2>
+        <ul>
+            <li>TypeScript modules can be compiled into AMD or common JS</li>
+            <li>AMD Needs some special care as TS doesn't understand require.js config</li>
+            <li><a href = "http://theblacksmithhq.com/tsmc/">TypeScript Module compiler</a> can be used to create smaller submodules</li>
+            
+        </ul>
+    </div>
+    <ul>
+
+    </ul>
+</section>
+
+<section class="slide shout">
+    <div>
+        <h2>Testing</h2>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Testing</h2>
+        <ul>
+            <li>Same libraries that work for JS will work for TS</li>
+            <li>TS Unit</li>
+            <li>Karma TypeScript Preprocessor</li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="slide">
+    <div>
+        <h2>Debugging</h2>
+        <ul>
+            <li>TypeScript has source maps enabled by default</li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="slide">
+    <div>
+        <h2>How to start</h2>
+        <pre>
+            <code>npm install -g typescript</code>
+        </pre>
+    </div>
+</section>
+<!--  build:YEOMAN-GENERATOR-PLACEHOLDER -->
+<!--
+    The line above is used by shower generator to insert slides. Please don't remove.
+-->
+<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
+
+<!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+<div class="progress">
+    <div></div>
+</div>
+
+<script src="bower_components/shower-core/shower.min.js"></script>
+<script src="bower_components/highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+  hljs.initHighlightingOnLoad();
+</script>
+
+<!-- Copyright © 2013 Kirill Cherkashin -->
+</body>
+</html>

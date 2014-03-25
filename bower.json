@@ -1,0 +1,9 @@
+{
+  "name": "package",
+  "version": "0.0.0",
+  "dependencies": {
+    "shower": "*",
+    "shower-bright": "*",
+    "highlightjs": "~8.0.0"
+  }
+}
